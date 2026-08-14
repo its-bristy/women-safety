@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Women's Safety & Emergency Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🛡️
+        <div>
+            <strong>Women's Safety &</strong>
+            <small>Emergency Guide</small>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#quickExit">Quick Exit</a>
+        <a href="#fakeCall">Fake Call</a>
+        <a href="#voiceSOS">Voice SOS</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#password">Password</a>
+        <a href="#location">Location</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div>
+        <p class="tag">SAFETY TOOLS</p>
+
+        <h1>
+            Stay Aware.<br>
+            <span>Stay Safe.</span>
+        </h1>
+
+        <p class="hero-text">
+            Quick and interactive safety tools designed
+            to help you during uncomfortable or emergency situations.
+        </p>
+    </div>
+
+</section>
+
+
+<main>
+
+
+<!-- ==================================================
+     9. QUICK EXIT
+================================================== -->
+
+<section class="section" id="quickExit">
+
+    <div class="section-heading">
+        <span>09</span>
+
+        <div>
+            <h2>Quick Exit</h2>
+            <p>Leave this website immediately when needed.</p>
+        </div>
+    </div>
+
+
+    <div class="quick-card">
+
+        <div class="big-icon">🚪</div>
+
+        <h3>Need to leave quickly?</h3>
+
+        <p>
+            If you are in an uncomfortable or unsafe situation,
+            use Quick Exit to leave this website immediately.
+        </p>
+
+        <button class="danger-btn" onclick="quickExit()">
+            🚪 Quick Exit
+        </button>
+
+        <small>
+            Pressing this button will redirect you to a neutral page.
+        </small>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     10. FAKE INCOMING CALL
+================================================== -->
+
+<section class="section" id="fakeCall">
+
+    <div class="section-heading">
+        <span>10</span>
+
+        <div>
+            <h2>Fake Incoming Call</h2>
+            <p>Simulate an incoming call when you need an excuse to leave.</p>
+        </div>
+    </div>
+
+
+    <div class="tool-card center">
+
+        <div class="big-icon">📞</div>
+
+        <h3>Need an excuse to leave?</h3>
+
+        <p>
+            Start a simulated incoming call from a saved contact.
+        </p>
+
+        <button class="primary-btn" onclick="startFakeCall()">
+            📞 Start Fake Call
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- FAKE CALL POPUP -->
+
+<div id="callModal" class="modal">
+
+    <div class="call-screen">
+
+        <p class="incoming">
+            Incoming Call
+        </p>
+
+        <div class="caller-photo">
+            👩
+        </div>
+
+        <h2>Mom</h2>
+
+        <p class="calling">
+            is calling...
+        </p>
+
+        <div class="call-actions">
+
+            <div>
+                <button
+                    class="accept"
+                    onclick="acceptCall()">
+                    📞
+                </button>
+
+                <span>Accept</span>
+            </div>
+
+
+            <div>
+                <button
+                    class="decline"
+                    onclick="declineCall()">
+                    📵
+                </button>
+
+                <span>Decline</span>
+            </div>
+
+        </div>
+
+        <small>
+            Simulation only — no real call is made.
+        </small>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     11. VOICE ACTIVATED SOS
+================================================== -->
+
+<section class="section" id="voiceSOS">
+
+    <div class="section-heading">
+        <span>11</span>
+
+        <div>
+            <h2>Voice Activated SOS</h2>
+            <p>Say "SOS" to activate the emergency alert.</p>
+        </div>
+    </div>
+
+
+    <div class="tool-card voice-card">
+
+        <div id="micCircle" class="mic-circle">
+            🎤
+        </div>
+
+        <h3 id="voiceTitle">
+            Voice Activated SOS
+        </h3>
+
+        <p id="voiceStatus">
+            Press the button and say "SOS".
+        </p>
+
+
+        <button
+            id="voiceButton"
+            class="primary-btn"
+            onclick="startVoiceSOS()">
+
+            🎤 Start Listening
+
+        </button>
+
+
+        <p class="permission-note">
+            Microphone permission is required.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     12. SAFETY QUIZ
+================================================== -->
+
+<section class="section" id="quiz">
+
+    <div class="section-heading">
+        <span>12</span>
+
+        <div>
+            <h2>Safety Quiz</h2>
+            <p>Test your personal safety knowledge.</p>
+        </div>
+    </div>
+
+
+    <div class="quiz-card">
+
+        <div class="quiz-header">
+
+            <span id="questionCounter">
+                Question 1 of 5
+            </span>
+
+            <strong id="quizScore">
+                Score: 0
+            </strong>
+
+        </div>
+
+
+        <div class="progress">
+            <div id="progressBar"></div>
+        </div>
+
+
+        <h3 id="question">
+            Loading question...
+        </h3>
+
+
+        <div id="answers" class="answers"></div>
+
+
+        <button
+            id="nextBtn"
+            class="primary-btn next"
+            onclick="nextQuestion()"
+            disabled>
+
+            Next Question →
+
+        </button>
+
+
+        <div id="quizResult" class="result hidden">
+
+            <div class="result-icon">
+                🎉
+            </div>
+
+            <h2>Quiz Completed!</h2>
+
+            <p id="resultText"></p>
+
+            <button
+                class="primary-btn"
+                onclick="restartQuiz()">
+
+                Try Again
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     13. PASSWORD STRENGTH CHECKER
+================================================== -->
+
+<section class="section" id="password">
+
+    <div class="section-heading">
+        <span>13</span>
+
+        <div>
+            <h2>Password Strength Checker</h2>
+            <p>Check whether your password is strong enough.</p>
+        </div>
+    </div>
+
+
+    <div class="tool-card password-card">
+
+        <h3>Create a Strong Password</h3>
+
+
+        <label for="passwordInput">
+            Password
+        </label>
+
+
+        <div class="password-input">
+
+            <input
+                id="passwordInput"
+                type="password"
+                placeholder="Enter your password"
+                oninput="checkPassword()"
+            >
+
+            <button
+                type="button"
+                onclick="togglePassword()">
+
+                👁️
+
+            </button>
+
+        </div>
+
+
+        <div class="strength-bars">
+
+            <span id="bar1"></span>
+            <span id="bar2"></span>
+            <span id="bar3"></span>
+            <span id="bar4"></span>
+
+        </div>
+
+
+        <div id="strengthText" class="strength-text">
+            Enter a password
+        </div>
+
+
+        <div class="password-rules">
+
+            <p id="ruleLength">
+                ○ At least 8 characters
+            </p>
+
+            <p id="ruleUpper">
+                ○ Contains uppercase letter
+            </p>
+
+            <p id="ruleLower">
+                ○ Contains lowercase letter
+            </p>
+
+            <p id="ruleNumber">
+                ○ Contains a number
+            </p>
+
+            <p id="ruleSpecial">
+                ○ Contains special character
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     14. LIVE LOCATION + WEATHER
+================================================== -->
+
+<section class="section" id="location">
+
+    <div class="section-heading">
+        <span>14</span>
+
+        <div>
+            <h2>Live Location & Weather</h2>
+            <p>View your current location and live weather information.</p>
+        </div>
+    </div>
+
+
+    <div class="location-card">
+
+        <div class="location-top">
+
+            <h3>
+                📍 Your Current Location
+            </h3>
+
+            <button
+                class="secondary-btn"
+                onclick="getLocation()">
+
+                Refresh Location
+
+            </button>
+
+        </div>
+
+
+        <div class="location-grid">
+
+
+            <!-- MAP -->
+
+            <div id="map" class="map">
+
+                <div class="map-placeholder">
+
+                    📍
+
+                    <p>
+                        Click "Refresh Location"
+                        to find your location.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOCATION DATA -->
+
+            <div class="location-info">
+
+                <div class="info-item">
+
+                    <span>Latitude</span>
+
+                    <strong id="latitude">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>Longitude</span>
+
+                    <strong id="longitude">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>Status</span>
+
+                    <strong id="locationStatus">
+                        Waiting...
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEATHER -->
+
+        <div class="weather">
+
+            <h3>
+                🌤️ Weather Information
+            </h3>
+
+
+            <div class="weather-box">
+
+                <div class="main-weather">
+
+                    <strong id="temperature">
+                        --°C
+                    </strong>
+
+                    <span id="weatherCondition">
+                        Waiting for location...
+                    </span>
+
+                </div>
+
+
+                <div class="weather-data">
+
+                    <div>
+                        <strong id="humidity">
+                            --%
+                        </strong>
+
+                        <span>
+                            Humidity
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong id="wind">
+                            -- km/h
+                        </strong>
+
+                        <span>
+                            Wind
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <strong>
+        🛡️ Women's Safety & Emergency Guide
+    </strong>
+
+    <p>
+        Stay Aware • Stay Safe
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
