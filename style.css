@@ -15,7 +15,6 @@ body {
 }
 
 
-/* ================= NAVBAR ================= */
 
 .navbar {
     position: sticky;
@@ -69,7 +68,7 @@ body {
 }
 
 
-/* ================= HERO ================= */
+
 
 .hero {
     padding: 80px 8%;
@@ -107,7 +106,7 @@ body {
 }
 
 
-/* ================= SECTION ================= */
+
 
 .section {
     max-width: 1050px;
@@ -149,7 +148,7 @@ body {
 }
 
 
-/* ================= CARDS ================= */
+
 
 .tool-card,
 .quick-card,
@@ -190,7 +189,7 @@ body {
 }
 
 
-/* ================= BUTTONS ================= */
+
 
 button {
     font-family: inherit;
@@ -236,7 +235,7 @@ button {
 }
 
 
-/* ================= QUICK EXIT ================= */
+/* QUICK EXIT  */
 
 .quick-card {
     text-align: center;
@@ -251,7 +250,7 @@ button {
 }
 
 
-/* ================= FAKE CALL ================= */
+/*  FAKE CALL  */
 
 .modal {
 
@@ -372,7 +371,7 @@ button {
 }
 
 
-/* ================= VOICE SOS ================= */
+/*  VOICE SOS */
 
 .voice-card {
     text-align: center;
@@ -425,7 +424,7 @@ button {
 }
 
 
-/* ================= QUIZ ================= */
+/*  QUIZ  */
 
 .quiz-header {
 
@@ -533,7 +532,7 @@ button {
 }
 
 
-/* ================= PASSWORD ================= */
+/* PASSWORD */
 
 .password-card {
     max-width: 700px;
@@ -618,7 +617,7 @@ button {
 }
 
 
-/* ================= LOCATION ================= */
+/*LOCATION */
 
 .location-top {
 
@@ -715,7 +714,7 @@ button {
 }
 
 
-/* ================= WEATHER ================= */
+/* WEATHER */
 
 .weather {
     margin-top: 30px;
@@ -799,7 +798,7 @@ footer p {
 }
 
 
-/* ================= MOBILE ================= */
+/*MOBILE */
 
 @media (max-width: 800px) {
 

@@ -1,6 +1,4 @@
-/* =====================================================
-   9. QUICK EXIT
-===================================================== */
+/*9. QUICK EXIT */
 
 function quickExit() {
 
@@ -11,9 +9,7 @@ function quickExit() {
 
 
 
-/* =====================================================
-   10. FAKE INCOMING CALL
-===================================================== */
+/*10. FAKE INCOMING CALL*/
 
 function startFakeCall() {
 
@@ -57,9 +53,7 @@ document.getElementById("callModal").addEventListener(
 
 
 
-/* =====================================================
-   11. VOICE ACTIVATED SOS
-===================================================== */
+/* 11. VOICE ACTIVATED SOS */
 
 let recognition = null;
 
@@ -160,15 +154,8 @@ function startVoiceSOS() {
 
 
             /*
-               IMPORTANT:
-
-               Later, when you merge this with
-               your friend's Feature 4 Emergency SOS,
+               IMPORTANT: when  merge this Feature 4 Emergency SOS,
                call their existing SOS function here.
-
-               Example:
-
-               activateSOS();
 
             */
 
@@ -232,9 +219,7 @@ function activateVoiceSOS() {
 
 
 
-/* =====================================================
-   12. SAFETY QUIZ
-===================================================== */
+/*12. SAFETY QUIZ*/
 
 const questions = [
 
@@ -535,9 +520,7 @@ loadQuestion();
 
 
 
-/* =====================================================
-   13. PASSWORD STRENGTH CHECKER
-===================================================== */
+/* 13. PASSWORD STRENGTH CHECKER*/
 
 function checkPassword() {
 
@@ -757,9 +740,7 @@ function togglePassword() {
 
 
 
-/* =====================================================
-   14. LIVE LOCATION
-===================================================== */
+/* 14. LIVE LOCATION */
 
 function getLocation() {
 
@@ -847,9 +828,7 @@ function getLocation() {
 
 
 
-/* =====================================================
-   GOOGLE MAP
-===================================================== */
+/*GOOGLE MAP*/
 
 function showGoogleMap(
     latitude,
@@ -874,10 +853,8 @@ function showGoogleMap(
 
 
 
-/* =====================================================
-   LIVE WEATHER
-   Open-Meteo API
-===================================================== */
+/* LIVE WEATHER
+   Open-Meteo API */
 
 async function getWeather(
     latitude,
