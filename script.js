@@ -22,6 +22,37 @@ function startFakeCall() {
 
 function acceptCall() {
 
+    const callScreen =
+        document.querySelector(".call-screen");
+
+    callScreen.innerHTML = `
+
+        <div class="connected-icon">
+            📞
+        </div>
+
+        <h2>Maa</h2>
+
+        <p class="calling">
+            Call connected
+        </p>
+
+        <button
+            class="end-call"
+            onclick="endCall()">
+            📵
+        </button>
+
+        <span class="end-text">
+            End Call
+        </span>
+
+    `;
+
+}
+
+function endCall() {
+
     document.getElementById("callModal")
         .classList.remove("show");
 

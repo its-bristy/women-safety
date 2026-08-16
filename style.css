@@ -273,16 +273,26 @@ button {
 
 .call-screen {
 
-    width: 330px;
+    width: 100%;
+    height: 100%;
 
-    padding: 40px 30px;
+    padding: 50px 25px;
+
+      background: linear-gradient(
+        180deg,
+        #17151d,
+        #30263b
+    );
 
     background: white;
 
     border-radius: 25px;
 
     text-align: center;
-
+ display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     animation: popup .25s ease;
 }
 
@@ -370,6 +380,43 @@ button {
     color: #999;
 }
 
+.connected-icon {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #28b65b;
+
+    font-size: 40px;
+
+    margin-bottom: 25px;
+}
+
+.call-screen .end-call {
+
+    width: 75px;
+    height: 75px;
+
+    margin-top: 80px;
+
+    border-radius: 50%;
+
+    background: #e5394f;
+
+    color: white;
+
+    font-size: 28px;
+}
+
+.end-text {
+    margin-top: 12px;
+    color: #ccc;
+}
 
 /*  VOICE SOS */
 
